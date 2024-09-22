@@ -1,34 +1,31 @@
 package problem;
 
 /**
- * 두 개의 정렬된 배열 nums1 과 nums2 가 각각 크기 m 과 n 으로 주어 졌을때, 두 배열의 중앙 값을 계산 하시오.
- * 중앙 값은 double type 으로 간주 하세요.
+ * Given two sorted arrays, nums1 and nums2, with sizes m and n respectively, calculate the median of the two arrays. The median should be considered as a double type.
  *
- * 아래 2개의 실행 조건을 만족 해야 합니다.
- * 1. run time complexity 는 O(log(m+n))
- * 2. run space complexity 는 O(1)
+ * You need to satisfy the following two conditions:
+ * 1. The runtime complexity should be O(log(m+n)).
+ * 2. The space complexity should be O(1).
  *
  * Example 1
- * 2 개의 배열의 길이의 합이 홀수일 경우는 중앙 값을 바로 추출이 가능
+ * When the sum of the lengths of the two arrays is odd, the median can be directly extracted.
  *
  * Input: nums1 = [1,3], nums2 = [2]
  * Output: 2.0
  *
- *
  * Example 2
- * 2 개의 배열의 길이의 합이 짝수일 경우는 중앙 값을 계산 하기 위해서,
- * 전체 배열 에서 중앙에 해당 하는 2 개의 값의 중앙 값을 계산 (2 + 3) / = 2.5
+ * When the sum of the lengths of the two arrays is even, to calculate the median, find the two values in the middle of the entire array and compute their average ( (2 + 3) / 2 = 2.5 ).
  *
  * Input: nums1 = [1,2], nums2 = [3,4]
  * Output: 2.5
  *
- * 제약 사항은 아래와 같습니다:
- *   nums1.length == m
- *   nums2.length == n
- *   0 <= m <= 1000
- *   0 <= n <= 1000
- *   1 <= m + n <= 2000
- *   -10^6 <= nums1[i], nums2[i] <= 10^6
+ * Constraints:
+ * 1. nums1.length == m
+ * 2. nums2.length == n
+ * 3. 0 <= m <= 1000
+ * 4. 0 <= n <= 1000
+ * 5. 1 <= m + n <= 2000
+ * 6. -10^6 <= nums1[i], nums2[i] <= 10^6
  */
 
 class FindMedianSortedArrays {

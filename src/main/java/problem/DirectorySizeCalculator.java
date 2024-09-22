@@ -1,18 +1,18 @@
 package problem;
 
 /**
- * 파일 시스템의 Directory 크기 계산하는 프로그램을 작성하세요.
+ * Write a program to calculate the size of a directory in the file system.
  *
- * 문제 설명:
- * 1. 주어진 파일 시스템에서 특정 Directory 의 총 크기를 계산하는 프로그램을 작성하세요.
- * 2. 파일 시스템은 directory 와 file 로 구성되어 있으며, 각 directory 는 하위 directory 와 file 을 가질 수 있습니다.
- * 3. 각 file 의 크기는 bytes 단위로 주어집니다.
+ * Problem Description:
+ *
+ * Write a program that calculates the total size of a given directory in the file system.
+ * The file system consists of directories and files, where each directory can contain subdirectories and files.
+ * The size of each file is given in bytes.
  *
  * // method signature
- * public long calculateDirectorySize(String dir)
+ * public long calculateDirectorySize(String dir);
  *
- * 입력 예시:
- * 파일 시스템은 다음과 같은 구조를 가진다고 가정합니다.
+ * Input Example: Assume the file system has the following structure:
  * /root
  * |-- /subdir1
  * |   |-- file1.txt (100 bytes)
@@ -23,23 +23,23 @@ package problem;
  * |       |-- file4.txt (400 bytes)
  * |-- file5.txt (500 bytes)
  *
- * 출력 예시:
+ * Output Example:
  * String directoryPath = "/root";
- * long result = calculateDirectorySize(directoryPath); // result는 1500 이어야 합니다.
+ * long result = calculateDirectorySize(directoryPath); // The result should be 1500.
  *
- * 조건:
- * 1. directory 경로는 절대 경로로 주어집니다.
- * 2. directory 와 file 이름은 고유합니다.
- * 3. 재귀적 으로 하위 directory 의 크기를 모두 합산해야 합니다.
+ * Conditions:
+ * 1. The directory path is given as an absolute path.
+ * 2. Directory and file names are unique.
+ * 3. You must recursively sum the sizes of all subdirectories.
  *
  * Hints:
- * 1. Visitor Pattern 을 사용하여 해결 할 수 있습니다.
- * 2. 단순하게 Recursive 로 풀 수 있습니다.
+ * 1. You can solve this using the Visitor Pattern.
+ * 2. A simple recursive approach can also be used.
  */
 public class DirectorySizeCalculator {
 
     public long calculateDirectorySize(String dir) {
-        // TODO: 구현
+        // TODO: implements
         return 0;
     }
 
@@ -52,4 +52,3 @@ public class DirectorySizeCalculator {
         System.out.println("Total size: " + result + " bytes");
     }
 }
-

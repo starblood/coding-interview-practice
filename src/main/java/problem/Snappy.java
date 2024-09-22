@@ -1,4 +1,4 @@
-package solution;
+package problem;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
@@ -89,7 +89,7 @@ public class Snappy {
             int length = findMatchLength(input, inputIndex);
             if (length >= 4) { // Minimum length for a match to be useful
                 int offset = findMatchOffset(input, inputIndex, length);
-                encodeCopy(output, length, offset); // TODO answer 1
+                // TODO implements
                 inputIndex += length;
             } else {
                 output.put(input[inputIndex++]);
@@ -119,7 +119,7 @@ public class Snappy {
                 int offset = (input[inputIndex++] & 0xFF) | ((input[inputIndex++] & 0xFF) << 8);
                 copyFromOutput(output, offset, length);
             } else { // Literal byte
-                output.put(b); // TODO answer 2
+                // TODO implements
             }
         }
 
@@ -139,12 +139,7 @@ public class Snappy {
         int maxLength = input.length - index;
         int matchLength = 0;
         for (int i = 0; i < maxLength - 4; i++) {
-            // TODO answer 3
-            if (input[index + i] == input[index + i + 4]) {
-                matchLength++;
-            } else {
-                break;
-            }
+            // TODO implements
         }
         return matchLength;
     }
@@ -158,10 +153,7 @@ public class Snappy {
      */
     private static int findMatchOffset(byte[] input, int index, int length) {
         for (int i = Math.max(0, index - MAX_OFFSET); i < index; i++) { // TODO answer 4
-            // TODO answer 5
-            if (Arrays.equals(Arrays.copyOfRange(input, i, i + length), Arrays.copyOfRange(input, index, index + length))) {
-                return index - i;
-            }
+            // TODO implements
         }
         return 0;
     }
@@ -187,7 +179,7 @@ public class Snappy {
     private static void copyFromOutput(ByteBuffer output, int offset, int length) {
         int position = output.position();
         for (int i = 0; i < length; i++) {
-            output.put(output.get(position - offset + i)); // TODO answer 6
+            // TODO implements
         }
     }
 }

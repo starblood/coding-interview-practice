@@ -1,25 +1,29 @@
 package problem;
 
 /**
- * 주어진 String input 으로부터 가장 긴 palindrome (회문) substring 을 구하세요.
- * 회문: 回文, 앞 에서 부터 읽으나 뒤 에서 부터 읽으나 같은 단어나 어구
+ * Find the longest palindrome substring from the given string input.
+ * Palindrome: A word or phrase that reads the same forwards and backwards.
+ *
  * <p>
  * Example 1:
  * Input: input = "babad"
  * Output: "bab"
- * "aba" 도 가능
+ * "aba" is also acceptable.
+ *
  * <p>
  * Example 2:
  * Input: input = "cbbd"
  * Output: "bb"
+ *
  * <p>
  * Constraints:
- * 1 <= s.length <= 1000
- * input consist of only digits and alphabets (English letters)
+ * 1. 1 <= s.length <= 1000
+ * 2. The input consists only of digits and alphabets (English letters).
+ *
  * <p>
- * 제약 사항:
- * 1. time complexity: O(n^2) 이하
- * 2. space complexity: O(n^2) 이하
+ * Additional Conditions:
+ * 1. Time complexity: O(n^2) or better.
+ * 2. Space complexity: O(n^2) or better.
  */
 public class LongestPalindrome {
     private static class PalindromeInclusiveBound {
